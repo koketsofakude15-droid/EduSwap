@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">        
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduSwap</title>
+    <link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="header ">  
+        <nav>
+            <a href="index.html"><img src="images/stack-of-books.png"></a>
+            <a href="index.html"><h1>EduSwap</h1></a>
+            <div class="nav-links" id="navLinks">
+             <i class="fa fa-times" onclick="closeMenu()"></i>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </div>
+             <i class="fa fa-bars" onclick="openMenu()"></i>
+        </nav>
+        
+<div class="text-box">
+    <h1>Buy & Sell <br>Textbooks <br>Affordably</h1>
+    <p>EduSwap connects students to trade used textbooks, notes and study materials - saving money and reducing waste.</p>
+    <div class="search-box">
+        <input type="text" placeholder="Search for books...">
+        <button onclick="searchBooks()">Search</button>
+    </div>
+
+    <a href="browse.html" class="btn-primary">Browse Listings</a>
+    <a href="sell.html" class="btn-secondary">Sell Your Books</a>
+</div>  
+</section>
+
+<!-----TextBooks---->
+<section class="Steps">
+    <h1>How It Works</h1>
+    <p>Simple steps to swap your textbooks:</p>
+    <div class="row">
+        <div class="step-col">
+            <img src="images/5455873.png">
+            <h3>1. Create an Account</h3>
+            <p>Sign up for free and set up your profile.</p>
+        </div>
+        <div class="step-col">
+            <img src="images/books.png">
+            <h3>2. List Your Books</h3>
+            <p>Upload details and photos of the textbooks you want to sell.</p>
+        </div>
+        <div class="step-col">
+            <img src="images/handshake.png">
+            <h3>3. Connect & Swap</h3>
+            <p>Browse listings, connect with buyers/sellers, and arrange swaps.</p>
+        </div>
+    </div>
+</section>
+
+<section class="features">
+    <h1>Why Choose EduSwap?</h1>
+    <div class="row">
+        <div class="features-col">
+            <h3>Affordable Prices</h3>
+            <p>Save money by buying used textbooks at a fraction of the cost.</p>
+        </div>
+        <div class="features-col">
+            <h3>Eco-Friendly</h3>
+            <p>Reduce waste and promote sustainability by swapping books.</p>
+        </div>
+        <div class="features-col">
+            <h3>Community Driven</h3>
+            <p>Connect with fellow students and build a supportive learning community.</p>
+        </div>
+    </div>
+</section>
+
+
+<section class="Steps">
+    <h1>Latest Listings</h1>
+    <div class="row">
+        <div class="step-col">
+            <img src="images/9781394235612.jpg">
+            <h3>CompTIA Textbook</h3>
+            <p>R250</p>
+        </div>
+
+        <div class="step-col">
+            <img src="images/51AZRevuX0L._AC_UF894,1000_QL80_.jpg">
+            <h3>Java Programming</h3>
+            <p>R400</p>
+        </div>
+
+        <div class="step-col">
+            <img src="images/images (1).jpg">
+            <h3>Software Engineering</h3>
+            <p>R200</p>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- JavaScript for Toggle Menu -->
+<script>
+    var navLinks = document.getElementById("navLinks");
+    function openMenu(){
+        navLinks.style.right = "0";
+    }
+    function closeMenu(){
+        navLinks.style.right = "-200px";
+    }
+    function searchBooks(){
+    let searchValue = document.querySelector(".search-box input").value;
+    localStorage.setItem("searchTerm", searchValue);
+    window.location.href = "browse.html";
+}
+</script>
+
+<footer class="footer">
+    <p>© 2026 EduSwap | Buy • Sell • Learn</p>
+</footer>
+
+</body>
+</html>
+    
+    
